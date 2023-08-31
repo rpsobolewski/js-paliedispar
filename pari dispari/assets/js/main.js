@@ -15,8 +15,12 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 
 
  //generazione computer
-
- const numeroComputer = Math.floor(Math.random() * 5) + 1;
+function randomNumber(biggestNumber){
+   const numeroRandom = Math.floor(Math.random() * Number(biggestNumber)) + 1; 
+   return numeroRandom;
+}
+ 
+const numeroComputer = randomNumber(5)
  console.log("numero computer: " + numeroComputer);
  //somma
 
