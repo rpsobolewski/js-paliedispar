@@ -4,7 +4,7 @@
 const parolaUtente = prompt("inserire una parola");
 console.log(parolaUtente);
 //assegnare la stessa parola ma scritta al contrario 
-const parolaContrario = parolaUtente.split('').reverse().join('');
+/* const parolaContrario = parolaUtente.split('').reverse().join('');
 console.log(parolaContrario)
 
 //confrontare con un ciclo while se la parola è uguale
@@ -12,22 +12,53 @@ console.log(parolaContrario)
 let palindromo = false;
 let i = 0;
 const lunghezza = parolaUtente.length;
-while (i < lunghezza){
-    if (parolaUtente[i] != parolaContrario[i]){
+while (i < lunghezza) {
+    if (parolaUtente[i] != parolaContrario[i]) {
 
         break
     } else {
         i++;
-        
+
         palindromo = true;
     }
 
+} */
+
+
+function palindromo(parolaUtente) {
+
+    const parolaContrario = parolaUtente.split('').reverse().join('');
+    let palindromo = false;
+    let i = 0;
+    const lunghezza = parolaUtente.length;
+    while (i < lunghezza) {
+        if (parolaUtente[i] != parolaContrario[i]) {
+
+            break
+        } else {
+            i++;
+
+            palindromo = true;
+        }
+
+    }
+    return palindromo;
+
 }
+const risultato = palindromo(parolaUtente);
+
+
+
+
+
+
+
+
 
 
 
 //stampare il risultato
-if (palindromo){
+if (risultato) {
     console.log("la parola è un palindromo");
 } else {
     console.log("la parola non è un palindromo");
