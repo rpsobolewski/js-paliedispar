@@ -27,17 +27,22 @@ while (i < lunghezza) {
 
 function palindromo(parolaUtente) {
 
-    const parolaContrario = parolaUtente.split('').reverse().join('');
+    
     let palindromo = false;
     let i = 0;
     const lunghezza = parolaUtente.length;
+
+    x = lunghezza;
+    x--;
+    console.log(x);
+
     while (i < lunghezza) {
-        if (parolaUtente[i] != parolaContrario[i]) {
+        if (parolaUtente[i] != parolaUtente[x]) {
 
             break
         } else {
             i++;
-
+            x--;
             palindromo = true;
         }
 
