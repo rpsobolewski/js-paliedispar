@@ -33,6 +33,7 @@ function palindromo(parola) {
     x--;
     while (i < lunghezza) {
         if (parola[i] != parola[x]) {
+            palindromo = false;
             break
         } else {
             i++;
