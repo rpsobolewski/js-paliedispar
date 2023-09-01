@@ -25,40 +25,24 @@ while (i < lunghezza) {
 } */
 
 
-function palindromo(parolaUtente) {
-
-    
+function palindromo(parola) {
     let palindromo = false;
+    const lunghezza = parola.length;
     let i = 0;
-    const lunghezza = parolaUtente.length;
-
     x = lunghezza;
     x--;
-    console.log(x);
-
     while (i < lunghezza) {
-        if (parolaUtente[i] != parolaUtente[x]) {
-
+        if (parola[i] != parola[x]) {
             break
         } else {
             i++;
             x--;
             palindromo = true;
         }
-
     }
     return palindromo;
-
 }
 const risultato = palindromo(parolaUtente);
-
-
-
-
-
-
-
-
 
 
 
